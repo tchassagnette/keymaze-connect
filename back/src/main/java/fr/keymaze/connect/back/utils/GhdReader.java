@@ -60,13 +60,13 @@ public class GhdReader {
 	}
 
 	private void readActivity(ByteBuffer byteBuffer) {
-		activity.keymazeId = readString(byteBuffer, 12);
-		activity.nbTracks = (int) byteBuffer.get();
-		activity.keymazeFileName = readString(byteBuffer, 65);
-		activity.trackName = readString(byteBuffer, 64);
-		activity.startDate = readDate(byteBuffer);
-		activity.duration = (long) byteBuffer.getInt() * 100;
-		activity.distance = Integer.valueOf(byteBuffer.getInt()).doubleValue() / 1000d;
+		activity.setId(readString(byteBuffer, 12));
+		activity.setNbTracks((int) byteBuffer.get());
+		activity.setFileName(readString(byteBuffer, 65));
+		activity.setTrackName(readString(byteBuffer, 64));
+//		activity.startDate = readDate(byteBuffer);
+//		activity.duration = (long) byteBuffer.getInt() * 100;
+//		activity.distance = Integer.valueOf(byteBuffer.getInt()).doubleValue() / 1000d;
 		byteBuffer.getInt();
 		byteBuffer.getShort();
 		byteBuffer.getShort();
@@ -76,15 +76,15 @@ public class GhdReader {
 		// System.out.println("Buffer position : " + byteBuffer.position());
 		// System.out.println("Inconnu : " + byteBuffer.getShort());
 		// System.out.println("Buffer position : " + byteBuffer.position());
-		activity.maxSpeed = Short.valueOf(byteBuffer.getShort()).doubleValue() / 100d;
-		activity.maxHeartRate = byteBuffer.getShort();
-		activity.avgHeartRate = byteBuffer.getShort();
-		activity.dPlus = byteBuffer.getShort();
-		activity.dMinus = byteBuffer.getShort();
-		activity.minHeartRate = byteBuffer.getShort();
-		activity.avgSpeed = byteBuffer.getInt() / 100d;
-		activity.avgAlt = byteBuffer.getShort();
-		activity.ascSpeed = byteBuffer.getInt() / 100d;
+//		activity.maxSpeed = Short.valueOf(byteBuffer.getShort()).doubleValue() / 100d;
+//		activity.maxHeartRate = byteBuffer.getShort();
+//		activity.avgHeartRate = byteBuffer.getShort();
+//		activity.dPlus = byteBuffer.getShort();
+//		activity.dMinus = byteBuffer.getShort();
+//		activity.minHeartRate = byteBuffer.getShort();
+//		activity.avgSpeed = byteBuffer.getInt() / 100d;
+//		activity.avgAlt = byteBuffer.getShort();
+//		activity.ascSpeed = byteBuffer.getInt() / 100d;
 		byteBuffer.get();
 		byteBuffer.getInt();
 		byteBuffer.getInt();
@@ -97,8 +97,8 @@ public class GhdReader {
 		// System.out.println("Buffer position : " + byteBuffer.position());
 		// System.out.println("Inconnu : " + byteBuffer.getInt());
 		// System.out.println("Buffer position : " + byteBuffer.position());
-		activity.calories = byteBuffer.getShort();
-		activity.maxSpeed = byteBuffer.getShort() / 100d;
+//		activity.calories = byteBuffer.getShort();
+//		activity.maxSpeed = byteBuffer.getShort() / 100d;
 		byteBuffer.getInt();
 		byteBuffer.getShort();
 		// System.out.println("Inconnu : " + byteBuffer.getInt());
@@ -114,11 +114,11 @@ public class GhdReader {
 			wayPointList.add(readWayPoint(byteBuffer, i));
 			// System.out.println("Pt"+i+" Lat : "+latitude+" Lon : "+longitude+" Alt : "+altitude+" time : "+temps+" cardio : "+cardio+" vitesse : "+speed);
 		}
-		activity.wayPoints = wayPointList;
-		if (wayPointList != null && wayPointList.size() > 0) {
-			activity.latitude = wayPointList.get(0).latitude;
-			activity.longitude = wayPointList.get(0).longitude;
-		}
+//		activity.wayPoints = wayPointList;
+//		if (wayPointList != null && wayPointList.size() > 0) {
+//			activity.latitude = wayPointList.get(0).latitude;
+//			activity.longitude = wayPointList.get(0).longitude;
+//		}
 		// System.out.println("Index " + byteBuffer.position() + "/"
 		// + byteBuffer.capacity());
 
