@@ -7,6 +7,9 @@
   <classpathentry kind="var" path="M2_REPO/com/google/inject/guice/3.0/guice-3.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/google/inject/extensions/guice-servlet/3.0/guice-servlet-3.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.6/jackson-core-asl-1.9.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-jaxrs/1.9.6/jackson-jaxrs-1.9.6.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.6/jackson-mapper-asl-1.9.6.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/inject/javax.inject/1/javax.inject-1.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.14/jersey-core-1.14.jar"/>
   <classpathentry kind="var" path="M2_REPO/com/sun/jersey/contribs/jersey-guice/1.14/jersey-guice-1.14.jar"/>

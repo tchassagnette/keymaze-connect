@@ -1,5 +1,10 @@
 package fr.keymaze.connect.back.servlet;
 
+import javax.ws.rs.ext.MessageBodyReader;
+import javax.ws.rs.ext.MessageBodyWriter;
+
+import org.codehaus.jackson.jaxrs.JacksonJsonProvider;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.servlet.GuiceServletContextListener;
@@ -17,6 +22,8 @@ public class KeymazeConnectGuiceServletConfig extends
 	         @Override
 	         protected void configureServlets() {
 	            bind(ActivityResource.class);
+	            bind(MessageBodyReader.class).to(JacksonJsonProvider.class);
+                bind(MessageBodyWriter.class).to(JacksonJsonProvider.class);
 	            // Route all requests through GuiceContainer
 	            serve("/*").with(GuiceContainer.class);
 	         }
