@@ -1,255 +1,251 @@
 package fr.keymaze.connect.back.model;
 
-import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+import java.util.Date;
+import java.util.List;
 
 @XmlRootElement
 @Entity
 public class Activity implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	private String id;
-	private String fileName;
-	private Date startDate;
-	private Long duration;
-	private Double distance;
-	private Double avgSpeed;
-	private Double maxSpeed;
-	private Short avgAlt;
-	private Double ascSpeed;
-	private Short dPlus;
-	private Short dMinus;
-	private Short calories;
-	private Short avgHeartRate;
-	private Short minHeartRate;
-	private Short maxHeartRate;
-	private Integer nbTracks;
-	private String trackName;
-	private String comment;
-	private String title;
-	private Boolean isPrivate;
-	private Double latitude;
-	private Double longitude;
-	
-	
-	private List<WayPoint> wayPoints;
-	
-	private User author;
-	
-	private ActivityType type;
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
 
-	public String geId() {
-		return id;
-	}
+    @Id
+    private String id;
+    private String fileName;
+    private Date startDate;
+    private Long duration;
+    private Double distance;
+    private Double avgSpeed;
+    private Double maxSpeed;
+    private Short avgAlt;
+    private Double ascSpeed;
+    private Short dPlus;
+    private Short dMinus;
+    private Short calories;
+    private Short avgHeartRate;
+    private Short minHeartRate;
+    private Short maxHeartRate;
+    private Integer nbTracks;
+    private String trackName;
+    private String comment;
+    private String title;
+    private Boolean isPrivate;
+    private Double latitude;
+    private Double longitude;
 
-	public void setId(String id) {
-		this.id = id;
-	}
 
-	public String getFileName() {
-		return fileName;
-	}
+    private List<WayPoint> wayPoints;
 
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
+    private User author;
 
-	public Date getStartDate() {
-		return startDate;
-	}
+    private ActivityType type;
 
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
-	}
+    public String geId() {
+        return id;
+    }
 
-	public Long getDuration() {
-		return duration;
-	}
+    public void setId(String id) {
+        this.id = id;
+    }
 
-	public void setDuration(Long duration) {
-		this.duration = duration;
-	}
+    public String getFileName() {
+        return fileName;
+    }
 
-	public Double getDistance() {
-		return distance;
-	}
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
 
-	public void setDistance(Double distance) {
-		this.distance = distance;
-	}
+    public Date getStartDate() {
+        return startDate;
+    }
 
-	public Double getAvgSpeed() {
-		return avgSpeed;
-	}
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
 
-	public void setAvgSpeed(Double avgSpeed) {
-		this.avgSpeed = avgSpeed;
-	}
+    public Long getDuration() {
+        return duration;
+    }
 
-	public Double getMaxSpeed() {
-		return maxSpeed;
-	}
+    public void setDuration(Long duration) {
+        this.duration = duration;
+    }
 
-	public void setMaxSpeed(Double maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
+    public Double getDistance() {
+        return distance;
+    }
 
-	public Short getAvgAlt() {
-		return avgAlt;
-	}
+    public void setDistance(Double distance) {
+        this.distance = distance;
+    }
 
-	public void setAvgAlt(Short avgAlt) {
-		this.avgAlt = avgAlt;
-	}
+    public Double getAvgSpeed() {
+        return avgSpeed;
+    }
 
-	public Double getAscSpeed() {
-		return ascSpeed;
-	}
+    public void setAvgSpeed(Double avgSpeed) {
+        this.avgSpeed = avgSpeed;
+    }
 
-	public void setAscSpeed(Double ascSpeed) {
-		this.ascSpeed = ascSpeed;
-	}
+    public Double getMaxSpeed() {
+        return maxSpeed;
+    }
 
-	public Short getdPlus() {
-		return dPlus;
-	}
+    public void setMaxSpeed(Double maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
 
-	public void setdPlus(Short dPlus) {
-		this.dPlus = dPlus;
-	}
+    public Short getAvgAlt() {
+        return avgAlt;
+    }
 
-	public Short getdMinus() {
-		return dMinus;
-	}
+    public void setAvgAlt(Short avgAlt) {
+        this.avgAlt = avgAlt;
+    }
 
-	public void setdMinus(Short dMinus) {
-		this.dMinus = dMinus;
-	}
+    public Double getAscSpeed() {
+        return ascSpeed;
+    }
 
-	public Short getCalories() {
-		return calories;
-	}
+    public void setAscSpeed(Double ascSpeed) {
+        this.ascSpeed = ascSpeed;
+    }
 
-	public void setCalories(Short calories) {
-		this.calories = calories;
-	}
+    public Short getdPlus() {
+        return dPlus;
+    }
 
-	public Short getAvgHeartRate() {
-		return avgHeartRate;
-	}
+    public void setdPlus(Short dPlus) {
+        this.dPlus = dPlus;
+    }
 
-	public void setAvgHeartRate(Short avgHeartRate) {
-		this.avgHeartRate = avgHeartRate;
-	}
+    public Short getdMinus() {
+        return dMinus;
+    }
 
-	public Short getMinHeartRate() {
-		return minHeartRate;
-	}
+    public void setdMinus(Short dMinus) {
+        this.dMinus = dMinus;
+    }
 
-	public void setMinHeartRate(Short minHeartRate) {
-		this.minHeartRate = minHeartRate;
-	}
+    public Short getCalories() {
+        return calories;
+    }
 
-	public Short getMaxHeartRate() {
-		return maxHeartRate;
-	}
+    public void setCalories(Short calories) {
+        this.calories = calories;
+    }
 
-	public void setMaxHeartRate(Short maxHeartRate) {
-		this.maxHeartRate = maxHeartRate;
-	}
+    public Short getAvgHeartRate() {
+        return avgHeartRate;
+    }
 
-	public Integer getNbTracks() {
-		return nbTracks;
-	}
+    public void setAvgHeartRate(Short avgHeartRate) {
+        this.avgHeartRate = avgHeartRate;
+    }
 
-	public void setNbTracks(Integer nbTracks) {
-		this.nbTracks = nbTracks;
-	}
+    public Short getMinHeartRate() {
+        return minHeartRate;
+    }
 
-	public String getTrackName() {
-		return trackName;
-	}
+    public void setMinHeartRate(Short minHeartRate) {
+        this.minHeartRate = minHeartRate;
+    }
 
-	public void setTrackName(String trackName) {
-		this.trackName = trackName;
-	}
+    public Short getMaxHeartRate() {
+        return maxHeartRate;
+    }
 
-	public String getComment() {
-		return comment;
-	}
+    public void setMaxHeartRate(Short maxHeartRate) {
+        this.maxHeartRate = maxHeartRate;
+    }
 
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
+    public Integer getNbTracks() {
+        return nbTracks;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setNbTracks(Integer nbTracks) {
+        this.nbTracks = nbTracks;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public String getTrackName() {
+        return trackName;
+    }
 
-	public Boolean getIsPrivate() {
-		return isPrivate;
-	}
+    public void setTrackName(String trackName) {
+        this.trackName = trackName;
+    }
 
-	public void setIsPrivate(Boolean isPrivate) {
-		this.isPrivate = isPrivate;
-	}
+    public String getComment() {
+        return comment;
+    }
 
-	public Double getLatitude() {
-		return latitude;
-	}
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
-	public void setLatitude(Double latitude) {
-		this.latitude = latitude;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public Double getLongitude() {
-		return longitude;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setLongitude(Double longitude) {
-		this.longitude = longitude;
-	}
+    public Boolean getIsPrivate() {
+        return isPrivate;
+    }
 
-	public List<WayPoint> getWayPoints() {
-		return wayPoints;
-	}
+    public void setIsPrivate(Boolean isPrivate) {
+        this.isPrivate = isPrivate;
+    }
 
-	public void setWayPoints(List<WayPoint> wayPoints) {
-		this.wayPoints = wayPoints;
-	}
+    public Double getLatitude() {
+        return latitude;
+    }
 
-	public User getAuthor() {
-		return author;
-	}
+    public void setLatitude(Double latitude) {
+        this.latitude = latitude;
+    }
 
-	public void setAuthor(User author) {
-		this.author = author;
-	}
+    public Double getLongitude() {
+        return longitude;
+    }
 
-	public ActivityType getType() {
-		return type;
-	}
+    public void setLongitude(Double longitude) {
+        this.longitude = longitude;
+    }
 
-	public void setType(ActivityType type) {
-		this.type = type;
-	}
-	
-	
-	
-		
-		
+    public List<WayPoint> getWayPoints() {
+        return wayPoints;
+    }
+
+    public void setWayPoints(List<WayPoint> wayPoints) {
+        this.wayPoints = wayPoints;
+    }
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
+    }
+
+    public ActivityType getType() {
+        return type;
+    }
+
+    public void setType(ActivityType type) {
+        this.type = type;
+    }
+
+
 }
